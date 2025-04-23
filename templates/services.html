@@ -1,0 +1,88 @@
+{% extends "base.html" %} {% block title %}services{% endblock %} 
+{% block body %}
+
+
+  <!-- Section Tabs -->
+  <section class="py-16 px-6 md:px-20 bg-yellow-100" x-data="{ tab: 'focus', slide: 0, testimonials: [
+    { name: 'Sita Devi – Farmer, Vidarbha', quote: 'I had lost all hope after two failed monsoons. They taught me drip irrigation and crop insurance. Now I grow with less water and sell directly.' },
+    { name: 'Ramesh Yadav – Smallholder, UP', quote: 'I didn’t even know about PM-Kisan until they came. Helped me get it — a lifeline for us.' },
+    { name: 'Laxmi Kumari – SHG Leader, Telangana', quote: 'They trained us in composting and now we run a vermicompost unit. We earn and our fields are healthier.' },
+    { name: 'Birsa Munda – Tribal Farmer, Jharkhand', quote: 'They showed us how to turn crop waste into bio-fertilizer. Respected our traditions while helping us grow.' },
+    { name: 'Noor Mohammad – Young Farmer, Odisha', quote: 'Natural farming brought pride back. We’re staying in our villages and building futures here.' }
+  ] }" x-init="setInterval(() => slide = (slide + 1) % testimonials.length, 5000)">
+    <div class="max-w-5xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-yellow-600 mb-8">🌟 Community Initiatives</h2>
+
+      <div class="flex space-x-4 mb-8">
+        <button @click="tab = 'focus'" :class="tab === 'focus' ? 'bg-yellow-400 text-white' : 'bg-white text-yellow-600'" class="px-4 py-2 rounded-full font-semibold shadow">📍 Focus Areas</button>
+      </div>
+
+      <!-- Focus Areas -->
+      <div x-show="tab === 'focus'" class="space-y-4 text-gray-700">
+        <p><svg class="inline w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414 17.657 8.172M6.343 8.172l4.243 4.243-4.243 4.243"></path></svg><strong>Maharashtra (Vidarbha & Marathwada)</strong> – Suicide prevention and organic cotton farming</p>
+        <p><svg class="inline w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414 17.657 8.172M6.343 8.172l4.243 4.243-4.243 4.243"></path></svg><strong>Uttar Pradesh</strong> – Water conservation and regenerative agriculture</p>
+        <p><svg class="inline w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414 17.657 8.172M6.343 8.172l4.243 4.243-4.243 4.243"></path></svg><strong>Jharkhand</strong> – Livelihood support for tribal farming communities</p>
+        <p><svg class="inline w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414 17.657 8.172M6.343 8.172l4.243 4.243-4.243 4.243"></path></svg><strong>Telangana</strong> – Women-led agribusiness initiatives</p>
+        <p><svg class="inline w-5 h-5 text-yellow-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 12.414 17.657 8.172M6.343 8.172l4.243 4.243-4.243 4.243"></path></svg><strong>Odisha</strong> – Natural farming and youth engagement</p>
+        <p class="mt-4">We are also launching a <strong>Digital Kisaan Helpdesk</strong> to provide real-time support through WhatsApp, voice calls, and local language content.</p>
+
+        
+        <div class="relative w-full max-w-md mx-auto mt-8">  
+          <img
+            src="https://cdn.iconscout.com/icon/free/png-256/free-indian-map-icon-download-in-svg-png-gif-file-formats--boundary-of-india-country-national-symbols-pack-sign-icons-1857120.png?f=webp&w=256"
+            alt="Agriculture Training"
+            class="rounded-xl shadow-xl"
+          >
+        </div>
+  </section>
+
+  <section class="py-16 px-6 md:px-20 bg-yellow-100">
+    <div class="max-w-5xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-yellow-600 mb-8">💬 Voices from the Fields</h2>
+  
+      <!-- Testimonials Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Testimonial 1 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <blockquote class="italic text-lg text-gray-700">
+            "I had lost all hope after two failed monsoons. They taught me drip irrigation and crop insurance. Now I grow with less water and sell directly."
+          </blockquote>
+          <p class="mt-4 font-semibold text-yellow-600">Sita Devi – Farmer, Vidarbha</p>
+        </div>
+  
+        <!-- Testimonial 2 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <blockquote class="italic text-lg text-gray-700">
+            "I didn’t even know about PM-Kisan until they came. Helped me get it — a lifeline for us."
+          </blockquote>
+          <p class="mt-4 font-semibold text-yellow-600">Ramesh Yadav – Smallholder, UP</p>
+        </div>
+  
+        <!-- Testimonial 3 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <blockquote class="italic text-lg text-gray-700">
+            "They trained us in composting and now we run a vermicompost unit. We earn and our fields are healthier."
+          </blockquote>
+          <p class="mt-4 font-semibold text-yellow-600">Laxmi Kumari – SHG Leader, Telangana</p>
+        </div>
+  
+        <!-- Testimonial 4 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <blockquote class="italic text-lg text-gray-700">
+            "They showed us how to turn crop waste into bio-fertilizer. Respected our traditions while helping us grow."
+          </blockquote>
+          <p class="mt-4 font-semibold text-yellow-600">Birsa Munda – Tribal Farmer, Jharkhand</p>
+        </div>
+  
+        <!-- Testimonial 5 -->
+        <div class="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <blockquote class="italic text-lg text-gray-700">
+            "Natural farming brought pride back. We’re staying in our villages and building futures here."
+          </blockquote>
+          <p class="mt-4 font-semibold text-yellow-600">Noor Mohammad – Young Farmer, Odisha</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+{% endblock %}

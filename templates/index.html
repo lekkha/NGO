@@ -1,0 +1,33 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} 
+
+{% block body %}
+
+<div class="container">
+  <section>
+    <div class="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-4 md:grid-cols-4 md:items-center md:gap-8">
+        <div class="md:col-span-1">
+          <div class="max-w-lg md:max-w-none">
+            <h2 class="text-2xl font-semibold text-gray-900 sm:text-3xl">
+              Empowering India's Farmers, One Field at a Time
+            </h2>
+  
+            <p class="mt-12 text-gray-700">
+              Join us in building a future where every kisaan thrives — with knowledge, tools, and community support.
+            </p>
+          </div>
+        </div>
+  
+        <div class="md:col-span-3">
+          <img
+            src="https://agrination.org.in/wp-content/uploads/2020/04/ffffffar.jpg"
+            class="w-full h-full object-cover rounded"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+{% endblock %}

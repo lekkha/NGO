@@ -1,0 +1,17 @@
+# Python-related
+__pycache__/
+*.pyc
+*.pyo
+
+# Django-related
+*.log
+*.sqlite3
+db.sqlite3
+
+# Virtual environment
+venv/
+env/
+.env
+
+# Cloudinary
+cloudinary.env
